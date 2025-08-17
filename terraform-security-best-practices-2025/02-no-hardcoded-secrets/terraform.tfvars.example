@@ -1,0 +1,4 @@
+# Example variables file (DO NOT COMMIT real secrets)
+client_id = "REPLACE"
+client_secret = "REPLACE"
+subscription_id = "REPLACE"

@@ -1,0 +1,18 @@
+# Example ConstraintTemplate for GCP Config Validator (skeleton)
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8snoopenbuckets
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sNoOpenBuckets
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8snoopenbuckets
+        violation[{"msg": msg}] {
+          # Placeholder policy logic
+          msg := "Bucket appears to be public"
+        }
